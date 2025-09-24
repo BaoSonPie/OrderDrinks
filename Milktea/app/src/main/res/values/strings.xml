@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HAS Milktea</string>
+    <string-array name="category_array">
+        <item>Drink</item>
+        <item>Food</item>
+    </string-array>
+
+</resources>
