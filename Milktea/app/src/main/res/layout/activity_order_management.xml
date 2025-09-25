@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFF8E1">
+
+    <!-- Thanh tiêu đề -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#FBC02D"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtTitleMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Danh sách món"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"/>
+
+        <ImageView
+            android:id="@+id/imgCart"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/coffee"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="Cart"/>
+    </RelativeLayout>
+
+    <!-- Spinner chọn loại đồ uống -->
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:spinnerMode="dropdown"/>
+
+    <!-- Search -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Tìm kiếm món..."/>
+
+    <!-- Danh sách món -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMenu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"/>
+</LinearLayout>
