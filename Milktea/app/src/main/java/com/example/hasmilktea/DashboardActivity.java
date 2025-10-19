@@ -46,11 +46,13 @@ public class DashboardActivity extends AppCompatActivity {
                         //Toast.makeText(this, "Đi đến Quản lý Order", Toast.LENGTH_SHORT).show()
                 startActivity(new Intent(this, OrderManagementActivity.class))
         );
+//thay đổi button QLNV
+        btnStaff.setOnClickListener(v -> {
+            Toast.makeText(this, "Đi đến Quản lý Nhân viên", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ManageStaffActivity.class);
+            startActivity(intent);
+        });
 
-        btnStaff.setOnClickListener(v ->
-                        Toast.makeText(this, "Đi đến Quản lý Nhân viên", Toast.LENGTH_SHORT).show()
-                // startActivity(new Intent(this, StaffActivity.class));
-        );
 
         btnAccount.setOnClickListener(v ->
                         Toast.makeText(this, "Đi đến Tài khoản", Toast.LENGTH_SHORT).show()

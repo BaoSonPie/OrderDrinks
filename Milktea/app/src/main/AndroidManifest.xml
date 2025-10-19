@@ -16,6 +16,8 @@
         <activity android:name=".OrderManagementActivity"/>
         <activity android:name=".ManageMenuActivity"/>
 
+        <!-- Quản lý Nhân viên -->
+        <activity android:name=".ManageStaffActivity" />
         <activity android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
