@@ -247,7 +247,10 @@ public class DBHelper extends SQLiteOpenHelper {
         db.update("menu", values, "id=?", new String[]{String.valueOf(id)});
         db.close();
     }
-
-
-
+    // 🟢 Hàm này dùng để hiển thị thông tin nhân viên sau khi đăng nhập
+    public Cursor getStaffByUsername(String username) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("SELECT * FROM " + TABLE_STAFF + " WHERE " + COL_STAFF_USERNAME + "=?",
+                new String[]{username});
+    }
 }
